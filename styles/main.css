@@ -162,6 +162,18 @@ footer p {
 }
 
 /***** General purpose classes *****/
+/* hide content but make it visible to screen readers */
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 .button {
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);

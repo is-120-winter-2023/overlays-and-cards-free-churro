@@ -33,9 +33,26 @@
 | - [CSS Text Shadow Generator](https://www.cssportal.com/css3-text-shadow-generator/)
 |
 
-| :warning: Dealing with the validator warning "section needs heading |
-|:----|
-| The validator will issue a warning if your `<section>` does not have a heading. You have two options. You can ignore this warning. |
+### :warning: Dealing with the validator warning "Section lacks heading."
+
+The validator will issue a warning if your `<section>` does not have a heading. You have three options.
+
+- 😬 [ok] Ignore the warning.
+- 😐 [better] Change section to a div, but you lose the semantic meaning of a section.
+- 😃 [best] Add a heading to your `<section>` for screen readers, but hide it from non-screen readers. To hide it, use the `.sr-only` class from the [WebAIM - Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/).
+
+```css
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+```
 
 ## Dynamic font size
 
@@ -119,8 +136,7 @@ Below is an example of markup for your cards. You are welcome to adjust it to su
 
 | 💡 Lazy loading images |
 |:-----------------------|
-| To improve performance, add the `loading="lazy"` attribute to your `<img>` elements that are *below the fold* or not immediately visible when the page is loaded. This will tell the browser to load the images only when they are visible in the viewport and save on page load time. |
-
+| To improve performance, add the `loading="lazy"` attribute to your `<img>` elements that are _below the fold_ or not immediately visible when the page is loaded. This will tell the browser to load the images only when they are visible in the viewport and save on page load time. |
 
 Since, by default, `<a>` elements are inline elements, you will need to set the `display` property of any `<a>` elements inside the `.cards` class to `inline-block` to make them behave like block elements. However, if you use a flexbox layout, you won't need to do this. To simplify this assignment, I recommend adding this to your CSS and not worrying about changing the `<a>` display property. We will learn more about how to use flexboxes in a future assignment.
 
