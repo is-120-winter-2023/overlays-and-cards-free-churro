@@ -108,7 +108,7 @@ Below is an example of markup for your cards. You are welcome to adjust it to su
 ```html
 <section class="cards">
   <a href="#" class="card">
-    <img src="" width="" height="" loading="lazy" alt="" />
+    <img src="" width="" height="" loading="lazy" alt="" >
     <p>card text</p>
   </a>
 
