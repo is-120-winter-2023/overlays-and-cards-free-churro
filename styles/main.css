@@ -162,6 +162,7 @@ footer p {
 }
 
 /***** General purpose classes *****/
+
 /* hide content but make it visible to screen readers */
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
